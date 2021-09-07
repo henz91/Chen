@@ -1,4 +1,10 @@
-bash test
-#rrr
+#! /bin/bash
 
-Chhene133
+password="ptr*1$#+22A"
+
+if [[ ${#password} -ge 8 && "$password" || *[A-Z]* || "$password" || *[a-z]* || "$password" || *[0-9]* && "$password" || *[*$#+]* ]]
+then
+    echo "pass"
+else
+    echo "fail"
+fi
