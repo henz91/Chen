@@ -4,8 +4,14 @@
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 
-password=$1
+#check if coming from file input
+if test "$1" == "-f" ; then
+password="$(cat $2)";
+  else
+  password=$1
+fi
 
+#password validtion
 len="${#password}"
 
 if test $len -ge 8 ; then
